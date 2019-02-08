@@ -15,16 +15,24 @@ const offset = 30
 
 // Hashes that should trigger click
 const click = [
+  'U+vUF',
+  'zqxZr',
+  'ae94k',
+  'r2P0Y',
+  'L2VCU',
+  'erXGe',
+  'ZBefI',
+  'RnGAx',
+  'zU6kw',
+  'K3n11',
+  'IaQTm'
 ]
 
 
 function mouseClick(slot) {
     // Move mouse into slot
-    console.log(width * slot)
-    robot.moveMouse(x + (width * slot), y)
-    // robot.mouseClick()
-    // Move mouse away so its not in front when capturing
-    // robot.moveMouse(1, 1)
+    robot.moveMouse(x + (width * slot) + offset, y + offset)
+    robot.mouseClick()
 }
 
 // Used for debugging
@@ -72,6 +80,6 @@ async function process() {
     }
   }
   // Call itself to continue clicking
-  // await process();
+  await process();
 }
 process()
